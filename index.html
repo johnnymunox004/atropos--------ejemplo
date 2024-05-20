@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atropos Parallax Effect</title>
+    <link rel="stylesheet" href="styles.scss">
+    <!-- Include Atropos CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/atropos/css/atropos.min.css">
+    <!-- Include Atropos JS -->
+    <script src="https://unpkg.com/atropos/js/atropos.min.js"></script>
+    <style>
+        html {
+            height: 100%;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            background-color: #575398;
+            overflow-x: hidden; /* Añadido */
+        }
+
+        .my-atropos {
+            width: 1920px;
+            height: 960px;
+            margin-top: -100px;
+            border-radius: 10px;
+            position: relative;
+        }
+
+        .atropos-content-container {
+            height: 100%;
+            position: relative;
+            background-color: aqua;
+        }
+
+        [data-atropos-offset] {
+            position: absolute;
+            width: 100%; /* Ajustado */
+            height: 100vh;
+        }
+
+        .text-inside-image {
+            background-color: rgba(0, 0, 0, 0.0);
+            color: rgb(74, 173, 150);
+            padding: 10px;
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 50px;
+        }
+
+        .small-image {
+            width: 10%; 
+            height: auto;
+            position: absolute;
+            left: 50%;      
+            top: 250px;        
+        }
+    </style>
+</head>
+<body>
+    <div class="atropos my-atropos">
+        <div class="atropos-scale">
+            <div class="atropos-rotate">
+                <div class="atropos-inner">
+                    <div class="atropos-content-container">
+                        <img src="v600.png" data-atropos-offset="0" />
+                        <img src="" data-atropos-offset="7" class="small-image" />
+                        <img src="https://libreriasjs.com/codepen-resources/atropos/moon.svg" data-atropos-offset="6" />
+                        <img src="https://libreriasjs.com/codepen-resources/atropos/mountains.svg" data-atropos-offset="2" />
+                        <img src="https://libreriasjs.com/codepen-resources/atropos/clouds.svg" data-atropos-offset="5" />
+                        <img src="https://libreriasjs.com/codepen-resources/atropos/ground.svg" data-atropos-offset="0" />
+                        <img src="https://libreriasjs.com/codepen-resources/atropos/leafs.svg" data-atropos-offset="5" />
+                        <div class="text-inside-image" data-atropos-offset="7">soap</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br><br> <br><br> <br><br> <br><br> <br><br> <br><br> <br><br> <br><br> <br><br> <br><br> <br><br> <br><br> <br><br> <br><br> <br><br> <br><br> <br><br> <br><br> <br><br> <br><br> <br><br> <br><br> <br><br> <br><br> <br><br> <br><br> <br><br> <br><br> <br><br> <br><br> <br><br>hola
+
+    <script type="module">
+        import Atropos from 'https://cdn.jsdelivr.net/npm/atropos@2/atropos.min.mjs';
+
+        document.addEventListener('DOMContentLoaded', (event) => {
+            const myAtropos = Atropos({
+                el: '.my-atropos',
+                // Agrega opciones adicionales si es necesario
+            });
+        });
+    </script>
+</body>
+</html>
